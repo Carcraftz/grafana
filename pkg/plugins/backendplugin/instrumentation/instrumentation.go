@@ -89,6 +89,8 @@ func instrumentPluginRequest(ctx context.Context, cfg Cfg, pluginCtx *backend.Pl
 			"endpoint", endpoint,
 			"eventName", "grafana-data-egress",
 			"time_before_plugin_request", timeBeforePluginRequest,
+			"fullErrorContext", err.Error(),
+
 		}
 
 		if pluginCtx.User != nil {
